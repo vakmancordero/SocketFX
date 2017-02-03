@@ -14,7 +14,7 @@ public class SocketFX extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("SocketFXML.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/socketfx/start/StartFXML.fxml"));
         
         Scene scene = new Scene(root);
         

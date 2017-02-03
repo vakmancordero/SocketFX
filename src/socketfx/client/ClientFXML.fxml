@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="250.0" prefWidth="288.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="socketfx.client.ClientController">
+   <children>
+      <MenuBar layoutX="310.0" layoutY="130.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <VBox layoutX="40.0" layoutY="215.0" prefHeight="253.0" prefWidth="208.0" spacing="10.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <VBox prefHeight="33.0" prefWidth="219.0" spacing="5.0">
+               <children>
+                  <Label text="Message:" />
+                  <TextField fx:id="messageTF" promptText="Send your message here:" />
+               </children>
+            </VBox>
+            <VBox prefHeight="33.0" prefWidth="219.0" spacing="5.0">
+               <children>
+                  <Label text="Message:" />
+                  <TextField promptText="Send your message here:" />
+               </children>
+            </VBox>
+            <VBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="19.0" prefWidth="208.0" spacing="5.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="142.0" text="Send!" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
