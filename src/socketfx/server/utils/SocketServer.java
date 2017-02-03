@@ -6,6 +6,7 @@ import java.net.ServerSocket;
 import socketfx.connection.ListeningThread;
 
 public class SocketServer {
+    
     private ServerSocket serverSocket;
     private ListeningThread listeningThread;
     private MessageHandler messageHandler;
@@ -13,9 +14,13 @@ public class SocketServer {
     public SocketServer(int port, MessageHandler handler) {
         messageHandler = handler;
         try {
+            
             serverSocket = new ServerSocket(port);
+            
             listeningThread = new ListeningThread(this, serverSocket);
+            
             listeningThread.start();
+            
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

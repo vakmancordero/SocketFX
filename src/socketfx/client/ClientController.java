@@ -22,7 +22,9 @@ public class ClientController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        this.client = new SocketClient("192.168.0.2", 5556);
+        //Cambio de conexion
+        //this.client = new SocketClient("192.168.0.2", 5556);
+        this.client = new SocketClient("localhost", 5556);
     }
     
     @FXML

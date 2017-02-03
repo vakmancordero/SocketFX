@@ -5,18 +5,23 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
-import java.net.InetAddress;
+
+//Clase para la conexion por medio de sockets
 import java.net.Socket;
 
 public class SocketClient {
+    
     private Socket socket;
 
     public SocketClient(String ip, int port) {
         
         try {
+            
+            //Instancia de la clase 
+            // parametros la dirección ip y el puerto
             socket = new Socket(ip, port);
+            
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
@@ -24,11 +29,13 @@ public class SocketClient {
     public void println(String message) {
         PrintWriter writer;
         try {
+            //Entablamas la comunicación utlizando el socket como canal o interfaz
             writer = new PrintWriter(new OutputStreamWriter(
                                      socket.getOutputStream()), true);
+            //Envio de datos por medio de la clase PrintWriter.
             writer.println(message);
         } catch (IOException e) {
-            // TODO Auto-generated catch block
+            
             e.printStackTrace();
         }
     }
@@ -43,7 +50,7 @@ public class SocketClient {
                                         socket.getInputStream()));
             return reader.readLine();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
+            
             e.printStackTrace();
             return "";
         }
@@ -57,7 +64,7 @@ public class SocketClient {
             if (socket != null && !socket.isClosed())
                 socket.close();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
+            
             e.printStackTrace();
         }
     }

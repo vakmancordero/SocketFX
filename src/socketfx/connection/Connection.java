@@ -24,6 +24,7 @@ public class Connection {
             );
             
             writer.println(message);
+            System.out.println();
             
         } catch (IOException e) {
             
